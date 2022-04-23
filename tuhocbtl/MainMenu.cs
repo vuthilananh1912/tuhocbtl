@@ -24,13 +24,13 @@ namespace tuhocbtl
 
         private void button2_Click(object sender, EventArgs e)
         {
-            NhanVien formNV = new NhanVien();
+            fNhanVien formNV = new fNhanVien();
             formNV.Show();
         }
 
         private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NhanVien formNV = new NhanVien();
+            fNhanVien formNV = new fNhanVien();
             formNV.Show();
         }
 

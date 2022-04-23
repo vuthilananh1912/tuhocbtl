@@ -66,6 +66,12 @@
     <Compile Include="fKhachHang.Designer.cs">
       <DependentUpon>fKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="fNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhanVien.Designer.cs">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="fSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,12 +132,6 @@
     <Compile Include="NhaCC.Designer.cs">
       <DependentUpon>NhaCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NhanVien.Designer.cs">
-      <DependentUpon>NhanVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DoiMK.resx">
@@ -139,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fKhachHang.resx">
       <DependentUpon>fKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNhanVien.resx">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fSanPham.resx">
       <DependentUpon>fSanPham.cs</DependentUpon>
@@ -171,9 +174,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhaCC.resx">
       <DependentUpon>NhaCC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhanVien.resx">
-      <DependentUpon>NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

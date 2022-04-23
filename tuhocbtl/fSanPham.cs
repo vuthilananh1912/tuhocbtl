@@ -24,7 +24,7 @@ namespace tuhocbtl
         {
             using (SqlConnection cnn = new SqlConnection(constr))
             {
-                using (SqlCommand cmd = new SqlCommand("select * from tblSanPham where deletedAt is null", cnn))
+                using (SqlCommand cmd = new SqlCommand("select * from tblSanPham where deletedAt is NULL", cnn))
                 {
                     cnn.Open();
                     using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
