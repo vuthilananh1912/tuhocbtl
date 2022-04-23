@@ -60,6 +60,12 @@
     <Compile Include="DoiMK.Designer.cs">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="fKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKhachHang.Designer.cs">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="HeThongQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,12 +95,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HoaDonRP.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="KhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KhachHang.Designer.cs">
-      <DependentUpon>KhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -131,6 +131,9 @@
     <EmbeddedResource Include="DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fKhachHang.resx">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HeThongQuanLy.resx">
       <DependentUpon>HeThongQuanLy.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,9 +150,6 @@
     <EmbeddedResource Include="HoaDonRP.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>HoaDonRP.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KhachHang.resx">
-      <DependentUpon>KhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

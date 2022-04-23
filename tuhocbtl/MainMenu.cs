@@ -19,8 +19,7 @@ namespace tuhocbtl
 
         private void button1_Click(object sender, EventArgs e)
         {
-            KhachHang formKH = new KhachHang();
-            formKH.Show();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -37,8 +36,7 @@ namespace tuhocbtl
 
         private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            KhachHang formKH = new KhachHang();
-            formKH.Show();
+            
         }
 
         private void quảnLýMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
