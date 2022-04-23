@@ -94,12 +94,13 @@ namespace tuhocbtl
             this.btnPrintRP.TabIndex = 5;
             this.btnPrintRP.Text = "Print";
             this.btnPrintRP.UseVisualStyleBackColor = true;
+            this.btnPrintRP.Click += new System.EventHandler(this.btnPrintRP_Click);
             // 
             // HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 797);
+            this.ClientSize = new System.Drawing.Size(1054, 749);
             this.Controls.Add(this.btnPrintRP);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.btnPrint);

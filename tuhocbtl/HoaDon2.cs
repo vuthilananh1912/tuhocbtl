@@ -13,7 +13,7 @@ namespace tuhocbtl
 {
     public partial class HoaDon2 : Form
     {
-        static string dataSource = @"Data Source=LAPTOP-TU3A4J8A\SQLEXPRESS;Initial Catalog=QuanLyKinhDoanhMayTinh;Integrated Security=True";
+        static string dataSource = @"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=QLKDMAYTINH;Integrated Security=True";
 
         public HoaDon2()
         {
@@ -93,6 +93,11 @@ namespace tuhocbtl
         private void HoaDon2_Load(object sender, EventArgs e)
         {
             LoadDL();
+
+        }
+
+        private void gvSLHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

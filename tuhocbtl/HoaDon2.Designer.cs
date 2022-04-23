@@ -43,6 +43,7 @@ namespace tuhocbtl
             this.gvSLHD.Name = "gvSLHD";
             this.gvSLHD.Size = new System.Drawing.Size(701, 150);
             this.gvSLHD.TabIndex = 0;
+            this.gvSLHD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSLHD_CellContentClick);
             // 
             // label1
             // 

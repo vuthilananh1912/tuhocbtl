@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,8 +15,7 @@ namespace tuhocbtl
 {
     public partial class HoaDon : Form
     {
-        static string dataSource = @"Data Source=LAPTOP-TU3A4J8A\SQLEXPRESS;Initial Catalog=QuanLyKinhDoanhMayTinh;Integrated Security=True";
-
+        string dataSource= ConfigurationManager.ConnectionStrings["KinhDoanhMayTinh"].ConnectionString;
         public HoaDon()
         {
             InitializeComponent();
@@ -113,6 +114,36 @@ namespace tuhocbtl
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnPrintRP_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(dataSource))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "pro_locHoaDonTheoMaNV";
+                    cmd.Parameters.AddWithValue("@sMaNV", cbMaNV.Text);
+
+
+                    using (SqlDataAdapter ad = new SqlDataAdapter())
+                    {
+                        ad.SelectCommand = cmd;
+                        DataTable tb = new System.Data.DataTable();
+                        ad.Fill(tb);
+
+
+                        //fill vao crystal report
+                        HoaDonReport rpt = new HoaDonReport();
+                        rpt.SetDataSource(tb);
+                        crystalReportViewer1.ReportSource = rpt;
+                        crystalReportViewer1.Refresh();
+                    }
+
+                }
+            }
         }
     }
 }
