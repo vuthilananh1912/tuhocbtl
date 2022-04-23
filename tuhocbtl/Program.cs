@@ -16,7 +16,7 @@ namespace tuhocbtl
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fKhachHang());
+            Application.Run(new fSanPham());
         }
     }
 }
