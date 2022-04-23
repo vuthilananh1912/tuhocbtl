@@ -93,6 +93,7 @@ namespace tuhocbtl
                         objRpt.SetDataSource(dataTable);
                         crystalReportViewer1.ReportSource = objRpt;
                         crystalReportViewer1.Refresh();
+                        //
                     }
                 }
             }
