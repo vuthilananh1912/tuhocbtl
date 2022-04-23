@@ -16,14 +16,14 @@ namespace tuhocbtl {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class ReportQuanLyHethong : ReportClass {
+    public class HoaDonReport : ReportClass {
         
-        public ReportQuanLyHethong() {
+        public HoaDonReport() {
         }
         
         public override string ResourceName {
             get {
-                return "ReportQuanLyHethong.rpt";
+                return "HoaDonReport.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace tuhocbtl {
         
         public override string FullResourceName {
             get {
-                return "tuhocbtl.ReportQuanLyHethong.rpt";
+                return "tuhocbtl.HoaDonReport.rpt";
             }
             set {
                 // Do nothing
@@ -87,12 +87,20 @@ namespace tuhocbtl {
                 return this.ReportDefinition.Sections[4];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_sMaNV {
+            get {
+                return this.DataDefinition.ParameterFields[0];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedReportQuanLyHethong : Component, ICachedReport {
+    public class CachedHoaDonReport : Component, ICachedReport {
         
-        public CachedReportQuanLyHethong() {
+        public CachedHoaDonReport() {
         }
         
         [Browsable(false)]
@@ -129,7 +137,7 @@ namespace tuhocbtl {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            ReportQuanLyHethong rpt = new ReportQuanLyHethong();
+            HoaDonReport rpt = new HoaDonReport();
             rpt.Site = this.Site;
             return rpt;
         }

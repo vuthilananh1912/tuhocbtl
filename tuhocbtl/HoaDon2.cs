@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace tuhocbtl
 {
-    public partial class HoaDon : Form
+    public partial class HoaDon2 : Form
     {
         static string dataSource = @"Data Source=LAPTOP-TU3A4J8A\SQLEXPRESS;Initial Catalog=QuanLyKinhDoanhMayTinh;Integrated Security=True";
 
-        public HoaDon()
+        public HoaDon2()
         {
             InitializeComponent();
         }
@@ -25,6 +25,24 @@ namespace tuhocbtl
 
         }
 
+        private void LoadDL()
+        {
+            using (SqlConnection connection = new SqlConnection(dataSource))
+            {
+                string sql = "SELECT COUNT(*) AS 'SL' , tblHoaDon.sMaNV FROM tblHoaDon INNER JOIN tblNhanVien ON tblNhanVien.sMaNV = tblHoaDon.sMaNV GROUP BY tblHoaDon.sMaNV";
+                using (SqlCommand cmd = new SqlCommand(sql, connection))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        gvSLHD.DataSource = dataTable;
+                        layDSMaNV();
+                    }
+                }
+            }
+        }
         private void layDSMaNV()
         {
             using (SqlConnection connection = new SqlConnection(dataSource))
@@ -41,6 +59,9 @@ namespace tuhocbtl
                         cbMaNV.DataSource = view;
                         cbMaNV.DisplayMember = "sMaNV";
 
+
+
+
                     }
                 }
             }
@@ -48,24 +69,19 @@ namespace tuhocbtl
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            string queryString = "pro_locHoaDonTheoMaNV";
+            string queryString = "pro_thongkehoadontheonv";
             using (SqlConnection connection = new SqlConnection(dataSource))
             {
                 using (SqlCommand cmd = new SqlCommand(queryString, connection))
                 {
                     connection.Open();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    
                     cmd.Parameters.AddWithValue("@sMaNV", cbMaNV.Text);
-                    //cmd.ExecuteNonQuery();
-                    using(SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                     {
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
-                        gvHoaDon.DataSource = dataTable;
-
-
-
+                        gvSLHD.DataSource = dataTable;
                     }
 
 
@@ -74,43 +90,9 @@ namespace tuhocbtl
             }
         }
 
-        private void LoadDL()
-        {
-            using (SqlConnection connection = new SqlConnection(dataSource))
-            {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM tblHoaDon", connection))
-                {
-                    cmd.CommandType = CommandType.Text;
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
-                    {
-                        DataTable dataTable = new DataTable();
-                        adapter.Fill(dataTable);
-                        gvHoaDon.DataSource = dataTable;
-                        layDSMaNV();
-
-
-                        HoaDonReport objRpt = new HoaDonReport();
-                        objRpt.SetDataSource(dataTable);
-                        crystalReportViewer1.ReportSource = objRpt;
-                        crystalReportViewer1.Refresh();
-                    }
-                }
-            }
-        }
-
-        private void HoaDon_Load(object sender, EventArgs e)
+        private void HoaDon2_Load(object sender, EventArgs e)
         {
             LoadDL();
-
-        }
-
-        private void gvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
-        {
 
         }
     }
