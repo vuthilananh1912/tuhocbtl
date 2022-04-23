@@ -29,90 +29,103 @@ namespace tuhocbtl
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelTenDN = new System.Windows.Forms.Label();
-            this.labelMK = new System.Windows.Forms.Label();
-            this.textBoxTenDN = new System.Windows.Forms.TextBox();
-            this.textBoxMK = new System.Windows.Forms.TextBox();
-            this.btnDN = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDangNhap = new System.Windows.Forms.Button();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.txtTenDN = new System.Windows.Forms.TextBox();
+            this.lbMatKhau = new System.Windows.Forms.Label();
+            this.lbTenDN = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // labelTenDN
+            // panel1
             // 
-            this.labelTenDN.AutoSize = true;
-            this.labelTenDN.Location = new System.Drawing.Point(74, 109);
-            this.labelTenDN.Name = "labelTenDN";
-            this.labelTenDN.Size = new System.Drawing.Size(81, 13);
-            this.labelTenDN.TabIndex = 0;
-            this.labelTenDN.Text = "Tên đăng nhập";
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.btnDangNhap);
+            this.panel1.Controls.Add(this.txtMatKhau);
+            this.panel1.Controls.Add(this.txtTenDN);
+            this.panel1.Controls.Add(this.lbMatKhau);
+            this.panel1.Controls.Add(this.lbTenDN);
+            this.panel1.Location = new System.Drawing.Point(257, 161);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(553, 232);
+            this.panel1.TabIndex = 3;
             // 
-            // labelMK
+            // btnDangNhap
             // 
-            this.labelMK.AutoSize = true;
-            this.labelMK.Location = new System.Drawing.Point(77, 152);
-            this.labelMK.Name = "labelMK";
-            this.labelMK.Size = new System.Drawing.Size(52, 13);
-            this.labelMK.TabIndex = 1;
-            this.labelMK.Text = "Mật khẩu";
+            this.btnDangNhap.Location = new System.Drawing.Point(256, 167);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(111, 41);
+            this.btnDangNhap.TabIndex = 3;
+            this.btnDangNhap.Text = "Đăng Nhập";
+            this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // textBoxTenDN
+            // txtMatKhau
             // 
-            this.textBoxTenDN.Location = new System.Drawing.Point(210, 101);
-            this.textBoxTenDN.Name = "textBoxTenDN";
-            this.textBoxTenDN.Size = new System.Drawing.Size(151, 20);
-            this.textBoxTenDN.TabIndex = 2;
+            this.txtMatKhau.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(256, 109);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(250, 30);
+            this.txtMatKhau.TabIndex = 2;
+            this.txtMatKhau.UseSystemPasswordChar = true;
             // 
-            // textBoxMK
+            // txtTenDN
             // 
-            this.textBoxMK.Location = new System.Drawing.Point(210, 144);
-            this.textBoxMK.Name = "textBoxMK";
-            this.textBoxMK.Size = new System.Drawing.Size(151, 20);
-            this.textBoxMK.TabIndex = 3;
+            this.txtTenDN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDN.Location = new System.Drawing.Point(256, 42);
+            this.txtTenDN.Name = "txtTenDN";
+            this.txtTenDN.Size = new System.Drawing.Size(250, 30);
+            this.txtTenDN.TabIndex = 1;
             // 
-            // btnDN
+            // lbMatKhau
             // 
-            this.btnDN.Location = new System.Drawing.Point(164, 232);
-            this.btnDN.Name = "btnDN";
-            this.btnDN.Size = new System.Drawing.Size(75, 23);
-            this.btnDN.TabIndex = 4;
-            this.btnDN.Text = "Đăng nhập";
-            this.btnDN.UseVisualStyleBackColor = true;
+            this.lbMatKhau.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.lbMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbMatKhau.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMatKhau.Location = new System.Drawing.Point(51, 107);
+            this.lbMatKhau.Name = "lbMatKhau";
+            this.lbMatKhau.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.lbMatKhau.Size = new System.Drawing.Size(168, 32);
+            this.lbMatKhau.TabIndex = 1;
+            this.lbMatKhau.Text = "Mật Khẩu";
             // 
-            // btnThoat
+            // lbTenDN
             // 
-            this.btnThoat.Location = new System.Drawing.Point(376, 231);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
-            this.btnThoat.TabIndex = 5;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
+            this.lbTenDN.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.lbTenDN.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbTenDN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenDN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbTenDN.Location = new System.Drawing.Point(51, 44);
+            this.lbTenDN.Name = "lbTenDN";
+            this.lbTenDN.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lbTenDN.Size = new System.Drawing.Size(168, 30);
+            this.lbTenDN.TabIndex = 1;
+            this.lbTenDN.Text = "Tên đăng nhập";
             // 
             // Login
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnDN);
-            this.Controls.Add(this.textBoxMK);
-            this.Controls.Add(this.textBoxTenDN);
-            this.Controls.Add(this.labelMK);
-            this.Controls.Add(this.labelTenDN);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.Text = "Quản lý đăng nhập";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label labelTenDN;
-        private System.Windows.Forms.Label labelMK;
-        private System.Windows.Forms.TextBox textBoxTenDN;
-        private System.Windows.Forms.TextBox textBoxMK;
-        private System.Windows.Forms.Button btnDN;
-        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.TextBox txtTenDN;
+        private System.Windows.Forms.Label lbMatKhau;
+        private System.Windows.Forms.Label lbTenDN;
     }
 }

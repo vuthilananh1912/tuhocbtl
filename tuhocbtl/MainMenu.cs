@@ -36,12 +36,13 @@ namespace tuhocbtl
 
         private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            fKhachHang kh = new fKhachHang();
+            kh.Show();
         }
 
         private void quảnLýMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MatHang formMH = new MatHang();
+            fSanPham formMH = new fSanPham();
             formMH.Show();
         }
 

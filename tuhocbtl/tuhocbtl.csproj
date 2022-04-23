@@ -114,12 +114,6 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="MatHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MatHang.Designer.cs">
-      <DependentUpon>MatHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="NhaCC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,9 +159,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MatHang.resx">
-      <DependentUpon>MatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhaCC.resx">
       <DependentUpon>NhaCC.cs</DependentUpon>
