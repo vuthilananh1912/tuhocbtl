@@ -58,10 +58,6 @@ namespace tuhocbtl
                         view.Sort = "sMaNV";
                         cbMaNV.DataSource = view;
                         cbMaNV.DisplayMember = "sMaNV";
-
-
-
-
                     }
                 }
             }
