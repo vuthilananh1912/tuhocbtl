@@ -42,28 +42,26 @@ namespace tuhocbtl
             this.labelTTNCC = new System.Windows.Forms.Label();
             this.labelqlyNCC = new System.Windows.Forms.Label();
             this.NCC = new System.Windows.Forms.DataGridView();
-            this.labelMaNCC = new System.Windows.Forms.Label();
-            this.txtBoxMaNCC = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.NCC)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBoxDiaChiNCC
             // 
-            this.txtBoxDiaChiNCC.Location = new System.Drawing.Point(184, 257);
+            this.txtBoxDiaChiNCC.Location = new System.Drawing.Point(184, 245);
             this.txtBoxDiaChiNCC.Name = "txtBoxDiaChiNCC";
             this.txtBoxDiaChiNCC.Size = new System.Drawing.Size(169, 20);
             this.txtBoxDiaChiNCC.TabIndex = 33;
             // 
             // txtBoxSdtNCC
             // 
-            this.txtBoxSdtNCC.Location = new System.Drawing.Point(184, 212);
+            this.txtBoxSdtNCC.Location = new System.Drawing.Point(184, 189);
             this.txtBoxSdtNCC.Name = "txtBoxSdtNCC";
             this.txtBoxSdtNCC.Size = new System.Drawing.Size(169, 20);
             this.txtBoxSdtNCC.TabIndex = 32;
             // 
             // txtBoxTenNCC
             // 
-            this.txtBoxTenNCC.Location = new System.Drawing.Point(184, 172);
+            this.txtBoxTenNCC.Location = new System.Drawing.Point(184, 124);
             this.txtBoxTenNCC.Name = "txtBoxTenNCC";
             this.txtBoxTenNCC.Size = new System.Drawing.Size(169, 20);
             this.txtBoxTenNCC.TabIndex = 31;
@@ -110,7 +108,7 @@ namespace tuhocbtl
             // labelDiachiNCC
             // 
             this.labelDiachiNCC.AutoSize = true;
-            this.labelDiachiNCC.Location = new System.Drawing.Point(63, 264);
+            this.labelDiachiNCC.Location = new System.Drawing.Point(63, 252);
             this.labelDiachiNCC.Name = "labelDiachiNCC";
             this.labelDiachiNCC.Size = new System.Drawing.Size(40, 13);
             this.labelDiachiNCC.TabIndex = 25;
@@ -119,7 +117,7 @@ namespace tuhocbtl
             // labelSDTNCC
             // 
             this.labelSDTNCC.AutoSize = true;
-            this.labelSDTNCC.Location = new System.Drawing.Point(63, 219);
+            this.labelSDTNCC.Location = new System.Drawing.Point(63, 196);
             this.labelSDTNCC.Name = "labelSDTNCC";
             this.labelSDTNCC.Size = new System.Drawing.Size(70, 13);
             this.labelSDTNCC.TabIndex = 23;
@@ -128,7 +126,7 @@ namespace tuhocbtl
             // labelTenNCC
             // 
             this.labelTenNCC.AutoSize = true;
-            this.labelTenNCC.Location = new System.Drawing.Point(63, 175);
+            this.labelTenNCC.Location = new System.Drawing.Point(63, 131);
             this.labelTenNCC.Name = "labelTenNCC";
             this.labelTenNCC.Size = new System.Drawing.Size(95, 13);
             this.labelTenNCC.TabIndex = 22;
@@ -159,31 +157,14 @@ namespace tuhocbtl
             this.NCC.Name = "NCC";
             this.NCC.Size = new System.Drawing.Size(343, 274);
             this.NCC.TabIndex = 34;
+            this.NCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NCC_CellClick);
             this.NCC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NCC_CellContentClick);
-            // 
-            // labelMaNCC
-            // 
-            this.labelMaNCC.AutoSize = true;
-            this.labelMaNCC.Location = new System.Drawing.Point(68, 132);
-            this.labelMaNCC.Name = "labelMaNCC";
-            this.labelMaNCC.Size = new System.Drawing.Size(91, 13);
-            this.labelMaNCC.TabIndex = 35;
-            this.labelMaNCC.Text = "Mã nhà cung cấp";
-            // 
-            // txtBoxMaNCC
-            // 
-            this.txtBoxMaNCC.Location = new System.Drawing.Point(184, 125);
-            this.txtBoxMaNCC.Name = "txtBoxMaNCC";
-            this.txtBoxMaNCC.Size = new System.Drawing.Size(169, 20);
-            this.txtBoxMaNCC.TabIndex = 36;
             // 
             // NhaCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtBoxMaNCC);
-            this.Controls.Add(this.labelMaNCC);
             this.Controls.Add(this.NCC);
             this.Controls.Add(this.txtBoxDiaChiNCC);
             this.Controls.Add(this.txtBoxSdtNCC);
@@ -220,7 +201,5 @@ namespace tuhocbtl
         private System.Windows.Forms.Label labelTTNCC;
         private System.Windows.Forms.Label labelqlyNCC;
         private System.Windows.Forms.DataGridView NCC;
-        private System.Windows.Forms.Label labelMaNCC;
-        private System.Windows.Forms.TextBox txtBoxMaNCC;
     }
 }

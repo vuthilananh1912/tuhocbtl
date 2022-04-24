@@ -29,8 +29,8 @@ namespace tuhocbtl
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btntkiemsp = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
@@ -65,9 +65,10 @@ namespace tuhocbtl
             // btntkiemsp
             // 
             this.btntkiemsp.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btntkiemsp.Location = new System.Drawing.Point(1196, 378);
+            this.btntkiemsp.Location = new System.Drawing.Point(897, 307);
+            this.btntkiemsp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btntkiemsp.Name = "btntkiemsp";
-            this.btntkiemsp.Size = new System.Drawing.Size(117, 40);
+            this.btntkiemsp.Size = new System.Drawing.Size(88, 32);
             this.btntkiemsp.TabIndex = 27;
             this.btntkiemsp.Text = "Tìm kiếm";
             this.btntkiemsp.UseVisualStyleBackColor = false;
@@ -90,9 +91,11 @@ namespace tuhocbtl
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(24, 71);
+            this.groupBox1.Location = new System.Drawing.Point(18, 58);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1303, 250);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(977, 203);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
@@ -102,10 +105,9 @@ namespace tuhocbtl
             this.txtDonGia.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtDonGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDonGia.Location = new System.Drawing.Point(908, 144);
-            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDonGia.Location = new System.Drawing.Point(681, 117);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(192, 28);
+            this.txtDonGia.Size = new System.Drawing.Size(144, 24);
             this.txtDonGia.TabIndex = 25;
             // 
             // txtMaNCC
@@ -113,10 +115,9 @@ namespace tuhocbtl
             this.txtMaNCC.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtMaNCC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNCC.Location = new System.Drawing.Point(908, 25);
-            this.txtMaNCC.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaNCC.Location = new System.Drawing.Point(681, 20);
             this.txtMaNCC.Name = "txtMaNCC";
-            this.txtMaNCC.Size = new System.Drawing.Size(192, 28);
+            this.txtMaNCC.Size = new System.Drawing.Size(144, 24);
             this.txtMaNCC.TabIndex = 24;
             // 
             // txtMa
@@ -124,10 +125,9 @@ namespace tuhocbtl
             this.txtMa.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtMa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMa.Location = new System.Drawing.Point(406, 25);
-            this.txtMa.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMa.Location = new System.Drawing.Point(304, 20);
             this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(192, 28);
+            this.txtMa.Size = new System.Drawing.Size(144, 24);
             this.txtMa.TabIndex = 23;
             // 
             // txtnamsx
@@ -135,10 +135,9 @@ namespace tuhocbtl
             this.txtnamsx.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtnamsx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtnamsx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnamsx.Location = new System.Drawing.Point(406, 197);
-            this.txtnamsx.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnamsx.Location = new System.Drawing.Point(304, 160);
             this.txtnamsx.Name = "txtnamsx";
-            this.txtnamsx.Size = new System.Drawing.Size(192, 28);
+            this.txtnamsx.Size = new System.Drawing.Size(144, 24);
             this.txtnamsx.TabIndex = 26;
             // 
             // txtDonvitinh
@@ -146,10 +145,9 @@ namespace tuhocbtl
             this.txtDonvitinh.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtDonvitinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDonvitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDonvitinh.Location = new System.Drawing.Point(908, 88);
-            this.txtDonvitinh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDonvitinh.Location = new System.Drawing.Point(681, 72);
             this.txtDonvitinh.Name = "txtDonvitinh";
-            this.txtDonvitinh.Size = new System.Drawing.Size(192, 28);
+            this.txtDonvitinh.Size = new System.Drawing.Size(144, 24);
             this.txtDonvitinh.TabIndex = 26;
             // 
             // txtHangsx
@@ -157,10 +155,9 @@ namespace tuhocbtl
             this.txtHangsx.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtHangsx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHangsx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHangsx.Location = new System.Drawing.Point(406, 140);
-            this.txtHangsx.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHangsx.Location = new System.Drawing.Point(304, 114);
             this.txtHangsx.Name = "txtHangsx";
-            this.txtHangsx.Size = new System.Drawing.Size(192, 28);
+            this.txtHangsx.Size = new System.Drawing.Size(144, 24);
             this.txtHangsx.TabIndex = 26;
             // 
             // txtTenSP
@@ -168,30 +165,27 @@ namespace tuhocbtl
             this.txtTenSP.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtTenSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenSP.Location = new System.Drawing.Point(406, 82);
-            this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenSP.Location = new System.Drawing.Point(304, 67);
             this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(192, 28);
+            this.txtTenSP.Size = new System.Drawing.Size(144, 24);
             this.txtTenSP.TabIndex = 26;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(702, 26);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(526, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(185, 31);
+            this.label3.Size = new System.Drawing.Size(139, 25);
             this.label3.TabIndex = 20;
-            this.label3.Text = "Mã nhà cung cấp";
+            this.label3.Text = "Tên nhà cung cấp";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(206, 19);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(154, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 45);
+            this.label2.Size = new System.Drawing.Size(121, 37);
             this.label2.TabIndex = 19;
             this.label2.Text = "Mã sản phẩm";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -199,10 +193,9 @@ namespace tuhocbtl
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(203, 193);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(152, 157);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(164, 34);
+            this.label9.Size = new System.Drawing.Size(123, 28);
             this.label9.TabIndex = 21;
             this.label9.Text = "Năm sản xuất";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -210,10 +203,9 @@ namespace tuhocbtl
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(714, 84);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(536, 68);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 34);
+            this.label8.Size = new System.Drawing.Size(123, 28);
             this.label8.TabIndex = 21;
             this.label8.Text = "Đơn vị tính";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -221,10 +213,9 @@ namespace tuhocbtl
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(206, 140);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(154, 114);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 34);
+            this.label6.Size = new System.Drawing.Size(123, 28);
             this.label6.TabIndex = 21;
             this.label6.Text = "Hãng sản xuất";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -232,10 +223,9 @@ namespace tuhocbtl
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(206, 82);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(154, 67);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 34);
+            this.label4.Size = new System.Drawing.Size(123, 28);
             this.label4.TabIndex = 21;
             this.label4.Text = "Tên sản phẩm";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -243,10 +233,9 @@ namespace tuhocbtl
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(714, 135);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(536, 110);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 44);
+            this.label5.Size = new System.Drawing.Size(101, 36);
             this.label5.TabIndex = 22;
             this.label5.Text = "Đơn giá";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,20 +243,18 @@ namespace tuhocbtl
             // txtTimkiemsp
             // 
             this.txtTimkiemsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimkiemsp.Location = new System.Drawing.Point(911, 383);
-            this.txtTimkiemsp.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTimkiemsp.Location = new System.Drawing.Point(683, 311);
             this.txtTimkiemsp.Name = "txtTimkiemsp";
-            this.txtTimkiemsp.Size = new System.Drawing.Size(265, 27);
+            this.txtTimkiemsp.Size = new System.Drawing.Size(200, 23);
             this.txtTimkiemsp.TabIndex = 25;
             this.txtTimkiemsp.TextChanged += new System.EventHandler(this.txtTimkiemsp_TextChanged);
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(769, 382);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(577, 310);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 28);
+            this.label7.Size = new System.Drawing.Size(85, 23);
             this.label7.TabIndex = 24;
             this.label7.Text = "Từ tìm kiếm";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -280,19 +267,17 @@ namespace tuhocbtl
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnSua);
             this.panel2.Controls.Add(this.btnThemSP);
-            this.panel2.Location = new System.Drawing.Point(24, 328);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(18, 266);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1303, 50);
+            this.panel2.Size = new System.Drawing.Size(977, 41);
             this.panel2.TabIndex = 23;
             // 
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnReset.Location = new System.Drawing.Point(759, 4);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReset.Location = new System.Drawing.Point(569, 3);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(115, 44);
+            this.btnReset.Size = new System.Drawing.Size(86, 36);
             this.btnReset.TabIndex = 3;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
@@ -301,10 +286,9 @@ namespace tuhocbtl
             // btnDong
             // 
             this.btnDong.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnDong.Location = new System.Drawing.Point(970, 4);
-            this.btnDong.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDong.Location = new System.Drawing.Point(728, 3);
             this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(109, 44);
+            this.btnDong.Size = new System.Drawing.Size(82, 36);
             this.btnDong.TabIndex = 2;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = false;
@@ -313,10 +297,9 @@ namespace tuhocbtl
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnXoa.Location = new System.Drawing.Point(561, 4);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Location = new System.Drawing.Point(421, 3);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(111, 44);
+            this.btnXoa.Size = new System.Drawing.Size(83, 36);
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -325,10 +308,9 @@ namespace tuhocbtl
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnSua.Location = new System.Drawing.Point(353, 4);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Location = new System.Drawing.Point(265, 3);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(106, 44);
+            this.btnSua.Size = new System.Drawing.Size(80, 36);
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -337,10 +319,9 @@ namespace tuhocbtl
             // btnThemSP
             // 
             this.btnThemSP.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnThemSP.Location = new System.Drawing.Point(144, 4);
-            this.btnThemSP.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThemSP.Location = new System.Drawing.Point(108, 3);
             this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(120, 44);
+            this.btnThemSP.Size = new System.Drawing.Size(90, 36);
             this.btnThemSP.TabIndex = 0;
             this.btnThemSP.Text = "Thêm";
             this.btnThemSP.UseVisualStyleBackColor = false;
@@ -351,29 +332,28 @@ namespace tuhocbtl
             this.dtgvSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvSanPham.BackgroundColor = System.Drawing.Color.White;
             this.dtgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvSanPham.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvSanPham.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvSanPham.GridColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dtgvSanPham.Location = new System.Drawing.Point(8, 428);
-            this.dtgvSanPham.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgvSanPham.Location = new System.Drawing.Point(6, 348);
             this.dtgvSanPham.Name = "dtgvSanPham";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvSanPham.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvSanPham.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvSanPham.RowHeadersWidth = 51;
             this.dtgvSanPham.RowTemplate.Height = 24;
-            this.dtgvSanPham.Size = new System.Drawing.Size(1315, 318);
+            this.dtgvSanPham.Size = new System.Drawing.Size(986, 258);
             this.dtgvSanPham.TabIndex = 22;
             this.dtgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvSanPham_CellClick);
             // 
@@ -381,19 +361,18 @@ namespace tuhocbtl
             // 
             this.label1.BackColor = System.Drawing.Color.DodgerBlue;
             this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, -2);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(18, -2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1299, 70);
+            this.label1.Size = new System.Drawing.Size(974, 57);
             this.label1.TabIndex = 21;
             this.label1.Text = "Quản lý sản phẩm";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fSanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1323, 789);
+            this.ClientSize = new System.Drawing.Size(992, 641);
             this.Controls.Add(this.btntkiemsp);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtTimkiemsp);
@@ -401,6 +380,7 @@ namespace tuhocbtl
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dtgvSanPham);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fSanPham";
             this.Text = "fSanPham";
             this.Load += new System.EventHandler(this.fSanPham_Load);

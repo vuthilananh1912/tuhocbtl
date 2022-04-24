@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using System.Configuration;
 
 namespace tuhocbtl
 {
@@ -16,7 +17,9 @@ namespace tuhocbtl
     {
         SqlConnection connection;
         SqlCommand command;
-        static string constr = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLKDMAYTINH;Integrated Security=True";
+        string constr = ConfigurationManager.ConnectionStrings["KinhDoanhMayTinh"].ConnectionString;
+
+        //static string constr = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLKDMAYTINH;Integrated Security=True";
         string str = " ";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
@@ -58,15 +61,32 @@ namespace tuhocbtl
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "Them_NCC";
-            command.Parameters.AddWithValue("@maNCC", txtBoxMaNCC.Text);
-            command.Parameters.AddWithValue("@tenNCC", txtBoxTenNCC.Text);
-            command.Parameters.AddWithValue("@sdtNCC", txtBoxSdtNCC.Text);
-            command.Parameters.AddWithValue("@diaChiNCC", txtBoxDiaChiNCC.Text);
-            command.ExecuteNonQuery();  
-            LoadDL();
+            if(txtBoxTenNCC.Text == "" || txtBoxSdtNCC.Text == "" || txtBoxDiaChiNCC.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+            }
+            else
+            {
+                try
+                {
+                    command = connection.CreateCommand();
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.CommandText = "Them_NCC";
+                    //command.Parameters.AddWithValue("@maNCC", txtBoxMaNCC.Text);
+                    command.Parameters.AddWithValue("@tenNCC", txtBoxTenNCC.Text);
+                    command.Parameters.AddWithValue("@sdtNCC", txtBoxSdtNCC.Text);
+                    command.Parameters.AddWithValue("@diaChiNCC", txtBoxDiaChiNCC.Text);
+                    command.ExecuteNonQuery();
+                    cleartextbox();
+                    LoadDL();
+                }
+                catch(Exception exc)
+                {
+                    MessageBox.Show(exc.Message);
+                }
+
+            }
+
             /*
             SqlConnection conn = new SqlConnection(constr);
             conn.Open();
@@ -92,31 +112,57 @@ namespace tuhocbtl
 
         private void NCC_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtBoxMaNCC.ReadOnly = true;
-            int i;
-            i = NCC.CurrentRow.Index;
-            txtBoxMaNCC.Text = NCC.Rows[i].Cells[0].Value.ToString();
-            txtBoxTenNCC.Text = NCC.Rows[i].Cells[1].Value.ToString();
-            txtBoxSdtNCC.Text = NCC.Rows[i].Cells[2].Value.ToString();
-            txtBoxDiaChiNCC.Text = NCC.Rows[i].Cells[3].Value.ToString();
+            //txtBoxTenNCC.ReadOnly = true;
+            //int i;
+            //i = NCC.CurrentRow.Index;
+            ////txtBoxMaNCC.Text = NCC.Rows[i].Cells[0].Value.ToString();
+            //txtBoxTenNCC.Text = NCC.Rows[i].Cells[0].Value.ToString();
+            //txtBoxSdtNCC.Text = NCC.Rows[i].Cells[1].Value.ToString();
+            //txtBoxDiaChiNCC.Text = NCC.Rows[i].Cells[2].Value.ToString();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            try
+            {
+                command = connection.CreateCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "Sua_NCC";
+                //command.Parameters.AddWithValue("@maNCC", txtBoxMaNCC.Text);
+                command.Parameters.AddWithValue("@tenNCC", txtBoxTenNCC.Text);
+                command.Parameters.AddWithValue("@sdtNCC", txtBoxSdtNCC.Text);
+                command.Parameters.AddWithValue("@diaChiNCC", txtBoxDiaChiNCC.Text);
+                command.ExecuteNonQuery();
+                cleartextbox();
+                LoadDL();
+            }
+            catch(Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
 
-            command = connection.CreateCommand();
-            command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "Sua_NCC";
-            command.Parameters.AddWithValue("@maNCC", txtBoxMaNCC.Text);
-            command.Parameters.AddWithValue("@tenNCC", txtBoxTenNCC.Text);
-            command.Parameters.AddWithValue("@sdtNCC", txtBoxSdtNCC.Text);
-            command.Parameters.AddWithValue("@diaChiNCC", txtBoxDiaChiNCC.Text);
-            command.ExecuteNonQuery();
-            LoadDL();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+        }
+
+        private void NCC_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtBoxTenNCC.ReadOnly = true;
+            int i;
+            i = NCC.CurrentRow.Index;
+            //txtBoxMaNCC.Text = NCC.Rows[i].Cells[0].Value.ToString();
+            txtBoxTenNCC.Text = NCC.Rows[i].Cells[0].Value.ToString();
+            txtBoxSdtNCC.Text = NCC.Rows[i].Cells[1].Value.ToString();
+            txtBoxDiaChiNCC.Text = NCC.Rows[i].Cells[2].Value.ToString();
+        
+        }
+        private void cleartextbox()
+        {
+            txtBoxTenNCC.Text = "";
+            txtBoxSdtNCC.Text = "";
+            txtBoxDiaChiNCC.Text = "";
         }
     }
 }

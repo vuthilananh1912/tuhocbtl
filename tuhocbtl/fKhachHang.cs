@@ -128,6 +128,7 @@ namespace tuhocbtl
             txtSDT.Text = "";
             txtEmail.Text = "";
             txtDiaChi.Text = "";
+            hienKH();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)

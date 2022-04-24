@@ -64,5 +64,19 @@ namespace tuhocbtl
             lg.Show();
             this.Close();
         }
+
+        private void thanhToánHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyHoaDon hd = new QuanLyHoaDon();
+            hd.Show();
+            
+        }
+
+        private void tìmKiếmHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTimKiemHoaDon hd = new FormTimKiemHoaDon();
+            hd.Show();
+            
+        }
     }
 }

@@ -38,7 +38,7 @@ namespace tuhocbtl
                     dtgvSanPham.Columns[1].HeaderText = "Tên sản phẩm";
                     dtgvSanPham.Columns[2].HeaderText = "Hãng sản xuất";
                     dtgvSanPham.Columns[3].HeaderText = "Năm sản xuất";
-                    dtgvSanPham.Columns[4].HeaderText = "Mã nhà cung cấp";
+                    dtgvSanPham.Columns[4].HeaderText = "Tên nhà cung cấp";
                     dtgvSanPham.Columns[5].HeaderText = "Đơn vị tính";
                     dtgvSanPham.Columns[6].HeaderText = "Đơn giá";
 
@@ -75,7 +75,7 @@ namespace tuhocbtl
             }
             if (txtMaNCC.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập mã nhà cung cấp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vui lòng nhập tên nhà cung cấp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtMaNCC.Focus();
                 return false;
             }
@@ -130,7 +130,7 @@ namespace tuhocbtl
                             cmd.Parameters.AddWithValue("@sTenSP", txtTenSP.Text);
                             cmd.Parameters.AddWithValue("@sHangSX", txtHangsx.Text);
                             cmd.Parameters.AddWithValue("@iNamSX", txtnamsx.Text);
-                            cmd.Parameters.AddWithValue("@sMaNCC", txtMaNCC.Text);
+                            cmd.Parameters.AddWithValue("@sTenNCC", txtMaNCC.Text);
                             cmd.Parameters.AddWithValue("@sDonviTinh", txtDonvitinh.Text);
                             cmd.Parameters.AddWithValue("@fDonGia", txtDonGia.Text);
                             cnn.Open();
@@ -161,7 +161,7 @@ namespace tuhocbtl
                     cmd.Parameters.AddWithValue("@sTenSP", txtTenSP.Text);
                     cmd.Parameters.AddWithValue("@sHangSX", txtHangsx.Text);
                     cmd.Parameters.AddWithValue("@iNamSX", txtnamsx.Text);
-                    cmd.Parameters.AddWithValue("@sMaNCC", txtMaNCC.Text);
+                    cmd.Parameters.AddWithValue("@sTenNCC", txtMaNCC.Text);
                     cmd.Parameters.AddWithValue("@sDonviTinh", txtDonvitinh.Text);
                     cmd.Parameters.AddWithValue("@fDonGia", txtDonGia.Text);
                     cnn.Open();
