@@ -12,9 +12,12 @@ namespace tuhocbtl
 {
     public partial class MainMenu : Form
     {
-        public MainMenu()
+        DateTime thoigiandangnhap;
+        string tendangnhap;
+        public MainMenu(string tendn)
         {
             InitializeComponent();
+            tendangnhap = tendn;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,7 +51,7 @@ namespace tuhocbtl
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DoiMK formDoiMK = new DoiMK();
+            DoiMK formDoiMK = new DoiMK(tendangnhap);
             formDoiMK.Show();
         }
 
@@ -77,6 +80,28 @@ namespace tuhocbtl
             FormTimKiemHoaDon hd = new FormTimKiemHoaDon();
             hd.Show();
             
+        }
+
+        private void tìmKiếmHóaĐơnToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormTimKiemHoaDon hd = new FormTimKiemHoaDon();
+            hd.Show();
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            thoigiandangnhap = DateTime.Now;
+        }
+
+        private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //if (MessageBox.Show(string.Format("Bạn có muốn đóng chương trình quản lí nhân viên?"), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //    e.Cancel = false;
+            //else
+            //    e.Cancel = true;
+            int timestamp;
+            timestamp = DateTime.Now.Minute - thoigiandangnhap.Minute;
+            MessageBox.Show(timestamp.ToString());
         }
     }
 }

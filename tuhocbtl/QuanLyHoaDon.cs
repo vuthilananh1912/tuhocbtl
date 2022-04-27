@@ -193,6 +193,27 @@ namespace tuhocbtl
             }
         }
 
+        private void deleteRowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!this.gvChiTietHoaDon.Rows[this.rowIndex].IsNewRow)
+            {
+                this.gvChiTietHoaDon.Rows.RemoveAt(this.rowIndex);
+            }
+        }
+
+        private int rowIndex = 0;
+        private void gvChiTietHoaDon_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Right)
+            {
+                this.gvChiTietHoaDon.Rows[e.RowIndex].Selected = true;
+                this.rowIndex = e.RowIndex;
+                this.gvChiTietHoaDon.CurrentCell = this.gvChiTietHoaDon.Rows[e.RowIndex].Cells[1];
+                this.contextMenuStrip1.Show(this.gvChiTietHoaDon, e.Location);
+                contextMenuStrip1.Show(Cursor.Position);
+            }
+        }
+
         private void gvChiTietHoaDon_RowValidated(object sender, DataGridViewCellEventArgs e)
         {
             gvChiTietHoaDon.Rows[0].HeaderCell.Value = "Mặt hàng";
@@ -300,6 +321,7 @@ namespace tuhocbtl
                         }
                     }
                     MessageBox.Show("Thêm thành công!");
+                    this.Close();
                     gvChiTietHoaDon.Rows.Clear();
                 }
 

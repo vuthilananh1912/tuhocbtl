@@ -33,8 +33,8 @@ namespace tuhocbtl
 
         private void MenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MainMenu formMenu = new MainMenu();
-            formMenu.Show();
+            //MainMenu formMenu = new MainMenu();
+            //formMenu.Show();
         }
     }
 }

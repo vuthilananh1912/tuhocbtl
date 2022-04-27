@@ -15,6 +15,7 @@ namespace tuhocbtl
     public partial class Login : Form
     {
         string constr = ConfigurationManager.ConnectionStrings["KinhDoanhMayTinh"].ConnectionString;
+        int count = 0;
         public Login()
         {
             InitializeComponent();
@@ -34,13 +35,19 @@ namespace tuhocbtl
                 mydata.Fill(tbl);
                 if (tbl.Rows.Count > 0)
                 {
-                    MainMenu menu = new MainMenu();
+                    MainMenu menu = new MainMenu(taiKhoan);
                     menu.Show();
                     this.Hide();
                 } else
                 {
+                    count++;
                     MessageBox.Show(string.Format("Tên đăng nhập hoặc mật khẩu không đúng!"), "Thông báo", MessageBoxButtons.OK);
                 }
+            }
+
+            if(count == 3)
+            {
+                MessageBox.Show("Ban da nhap sai qua 3 lan");
             }
         }
     }

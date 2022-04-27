@@ -29,6 +29,7 @@ namespace tuhocbtl
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.labelTongTien = new System.Windows.Forms.Label();
@@ -52,8 +53,11 @@ namespace tuhocbtl
             this.cbTenKhachHang = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gvChiTietHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label12
@@ -109,6 +113,7 @@ namespace tuhocbtl
             this.gvChiTietHoaDon.Name = "gvChiTietHoaDon";
             this.gvChiTietHoaDon.Size = new System.Drawing.Size(890, 150);
             this.gvChiTietHoaDon.TabIndex = 42;
+            this.gvChiTietHoaDon.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvChiTietHoaDon_CellMouseUp);
             this.gvChiTietHoaDon.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvChiTietHoaDon_RowValidated);
             // 
             // btnAddView
@@ -277,6 +282,20 @@ namespace tuhocbtl
             this.label1.TabIndex = 25;
             this.label1.Text = "Quản lý mua hàng";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteRowToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(134, 26);
+            // 
+            // deleteRowToolStripMenuItem
+            // 
+            this.deleteRowToolStripMenuItem.Name = "deleteRowToolStripMenuItem";
+            this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteRowToolStripMenuItem.Text = "Delete Row";
+            this.deleteRowToolStripMenuItem.Click += new System.EventHandler(this.deleteRowToolStripMenuItem_Click);
+            // 
             // QuanLyHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +329,7 @@ namespace tuhocbtl
             this.Load += new System.EventHandler(this.QuanLyHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvChiTietHoaDon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,5 +360,7 @@ namespace tuhocbtl
         private System.Windows.Forms.ComboBox cbTenKhachHang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deleteRowToolStripMenuItem;
     }
 }

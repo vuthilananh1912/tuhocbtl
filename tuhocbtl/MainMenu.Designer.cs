@@ -40,10 +40,10 @@ namespace tuhocbtl
             this.quảnLýMặtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNhàCungCấpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thanhToánHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thanhToánHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tìmKiếmHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tìmKiếmHóaĐơnToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,20 +143,6 @@ namespace tuhocbtl
             this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.thanhToánToolStripMenuItem.Text = "Thanh toán";
             // 
-            // tìmKiếmToolStripMenuItem
-            // 
-            this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
-            // 
-            // thốngKêToolStripMenuItem
-            // 
-            this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tìmKiếmHóaĐơnToolStripMenuItem});
-            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.thốngKêToolStripMenuItem.Text = "Thống kê";
-            // 
             // thanhToánHóaĐơnToolStripMenuItem
             // 
             this.thanhToánHóaĐơnToolStripMenuItem.Name = "thanhToánHóaĐơnToolStripMenuItem";
@@ -164,12 +150,26 @@ namespace tuhocbtl
             this.thanhToánHóaĐơnToolStripMenuItem.Text = "Thanh Toán Hóa Đơn";
             this.thanhToánHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.thanhToánHóaĐơnToolStripMenuItem_Click);
             // 
-            // tìmKiếmHóaĐơnToolStripMenuItem
+            // tìmKiếmToolStripMenuItem
             // 
-            this.tìmKiếmHóaĐơnToolStripMenuItem.Name = "tìmKiếmHóaĐơnToolStripMenuItem";
-            this.tìmKiếmHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tìmKiếmHóaĐơnToolStripMenuItem.Text = "Tìm kiếm hóa đơn";
-            this.tìmKiếmHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmHóaĐơnToolStripMenuItem_Click);
+            this.tìmKiếmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tìmKiếmHóaĐơnToolStripMenuItem1});
+            this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
+            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
+            // 
+            // thốngKêToolStripMenuItem
+            // 
+            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            // 
+            // tìmKiếmHóaĐơnToolStripMenuItem1
+            // 
+            this.tìmKiếmHóaĐơnToolStripMenuItem1.Name = "tìmKiếmHóaĐơnToolStripMenuItem1";
+            this.tìmKiếmHóaĐơnToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.tìmKiếmHóaĐơnToolStripMenuItem1.Text = "Tìm kiếm hóa đơn";
+            this.tìmKiếmHóaĐơnToolStripMenuItem1.Click += new System.EventHandler(this.tìmKiếmHóaĐơnToolStripMenuItem1_Click);
             // 
             // MainMenu
             // 
@@ -181,6 +181,8 @@ namespace tuhocbtl
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainMenu";
             this.Text = "Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenu_FormClosing);
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -203,7 +205,7 @@ namespace tuhocbtl
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýNhàCungCấpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thanhToánHóaĐơnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tìmKiếmHóaĐơnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tìmKiếmHóaĐơnToolStripMenuItem1;
     }
 }
 

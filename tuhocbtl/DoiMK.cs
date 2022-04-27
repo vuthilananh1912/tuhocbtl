@@ -12,12 +12,18 @@ namespace tuhocbtl
 {
     public partial class DoiMK : Form
     {
-        public DoiMK()
+        public DoiMK(string tendn)
         {
             InitializeComponent();
+            txtTenDN.Text = tendn;
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
