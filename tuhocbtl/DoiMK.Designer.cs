@@ -32,10 +32,8 @@ namespace tuhocbtl
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtTenDN = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -69,15 +67,6 @@ namespace tuhocbtl
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu mới";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 193);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Nhập lại mật khẩu";
-            // 
             // txtTenDN
             // 
             this.txtTenDN.Location = new System.Drawing.Point(200, 101);
@@ -86,23 +75,16 @@ namespace tuhocbtl
             this.txtTenDN.Size = new System.Drawing.Size(226, 20);
             this.txtTenDN.TabIndex = 4;
             // 
-            // textBox2
+            // txtMatKhau
             // 
-            this.textBox2.Location = new System.Drawing.Point(200, 146);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(226, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(200, 186);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(226, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtMatKhau.Location = new System.Drawing.Point(200, 146);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(226, 20);
+            this.txtMatKhau.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(214, 228);
+            this.button1.Location = new System.Drawing.Point(200, 203);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -112,12 +94,13 @@ namespace tuhocbtl
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(339, 228);
+            this.button2.Location = new System.Drawing.Point(323, 203);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 8;
             this.button2.Text = "Huỷ bỏ\r\n";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // DoiMK
             // 
@@ -126,10 +109,8 @@ namespace tuhocbtl
             this.ClientSize = new System.Drawing.Size(540, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTenDN);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -145,10 +126,8 @@ namespace tuhocbtl
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTenDN;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

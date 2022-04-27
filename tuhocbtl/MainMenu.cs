@@ -99,9 +99,9 @@ namespace tuhocbtl
             //    e.Cancel = false;
             //else
             //    e.Cancel = true;
-            int timestamp;
-            timestamp = DateTime.Now.Minute - thoigiandangnhap.Minute;
-            MessageBox.Show(timestamp.ToString());
+            //int timestamp;
+            //timestamp = DateTime.Now.Minute - thoigiandangnhap.Minute;
+            //MessageBox.Show(timestamp.ToString());
         }
     }
 }
