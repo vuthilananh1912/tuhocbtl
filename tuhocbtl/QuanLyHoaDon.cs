@@ -235,7 +235,22 @@ namespace tuhocbtl
             }
             else
             {
-                gvChiTietHoaDon.Rows.Add(row);
+                int count = 0;
+                foreach (DataGridViewRow row1 in gvChiTietHoaDon.Rows)
+                {
+                    if (gvChiTietHoaDon.Rows[row1.Index].Cells[0].Value == currentMaHang)
+                    {
+                        gvChiTietHoaDon.Rows[row1.Index].Cells[2].Value = Convert.ToInt32(gvChiTietHoaDon.Rows[row1.Index].Cells[2].Value) + numSoLuong.Value ;
+                        count++;
+                    }
+
+                    //More code here
+                }
+                if(count == 0)
+                {
+                    gvChiTietHoaDon.Rows.Add(row);
+                }
+
 
                 long tongtien = 0;
                 foreach (DataGridViewRow row1 in gvChiTietHoaDon.Rows)
@@ -321,6 +336,8 @@ namespace tuhocbtl
                         }
                     }
                     MessageBox.Show("Thêm thành công!");
+                    FormInHoaDon formInHoaDon = new FormInHoaDon(labelMaHD.Text);
+                    formInHoaDon.Show();
                     this.Close();
                     gvChiTietHoaDon.Rows.Clear();
                 }

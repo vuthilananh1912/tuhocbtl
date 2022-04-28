@@ -25,30 +25,41 @@ namespace tuhocbtl
         {
             string taiKhoan = txtTenDN.Text;
             string matKhau = txtMatKhau.Text;
+
+            //if(!taiKhoan.Any(char.IsUpper))
+            //if (!taiKhoan.Any(char.IsDigit))
+            //{
+            //    MessageBox.Show("Ten dang nhap can it nhat mot chu so ");
+            //}
+            //else
+            //{
             using (SqlConnection cnn = new SqlConnection(constr))
-            {
-                string sql = $"select * from tblNhanVien where sTenDN = '{taiKhoan}' and sMatKhau = '{matKhau}'";
-
-                SqlDataAdapter mydata = new SqlDataAdapter(sql, cnn);
-                DataTable tbl = new DataTable();
-
-                mydata.Fill(tbl);
-                if (tbl.Rows.Count > 0)
                 {
-                    MainMenu menu = new MainMenu(taiKhoan);
-                    menu.Show();
-                    this.Hide();
-                } else
-                {
-                    count++;
-                    MessageBox.Show(string.Format("Tên đăng nhập hoặc mật khẩu không đúng!"), "Thông báo", MessageBoxButtons.OK);
+                    string sql = $"select * from tblNhanVien where sTenDN = '{taiKhoan}' and sMatKhau = '{matKhau}'";
+
+                    SqlDataAdapter mydata = new SqlDataAdapter(sql, cnn);
+                    DataTable tbl = new DataTable();
+
+                    mydata.Fill(tbl);
+                    if (tbl.Rows.Count > 0)
+                    {
+                        MainMenu menu = new MainMenu(taiKhoan);
+                        menu.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        count++;
+                        MessageBox.Show(string.Format("Tên đăng nhập hoặc mật khẩu không đúng!"), "Thông báo", MessageBoxButtons.OK);
+                    }
                 }
-            }
 
-            if(count == 3)
-            {
-                MessageBox.Show("Ban da nhap sai qua 3 lan");
-            }
+                if (count == 3)
+                {
+                    MessageBox.Show("Ban da nhap sai qua 3 lan");
+                }
+            //}
+            
         }
     }
 }
