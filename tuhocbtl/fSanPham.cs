@@ -43,7 +43,8 @@ namespace tuhocbtl
                     dtgvSanPham.Columns[6].HeaderText = "Đơn giá";
 
                     dtgvSanPham.Columns[7].Visible = false;
-                }
+                    dtgvSanPham.Columns[8].HeaderText = "Số lượng";
+                } 
             }
         }
 
@@ -63,6 +64,7 @@ namespace tuhocbtl
             txtMaNCC.Text = dtgvSanPham.Rows[i].Cells[4].Value.ToString();
             txtDonvitinh.Text = dtgvSanPham.Rows[i].Cells[5].Value.ToString();
             txtDonGia.Text = dtgvSanPham.Rows[i].Cells[6].Value.ToString();
+            numSoLuong.Value = decimal.Parse(dtgvSanPham.Rows[i].Cells[8].Value.ToString());
         }
 
         private bool KiemTra()
@@ -133,6 +135,7 @@ namespace tuhocbtl
                             cmd.Parameters.AddWithValue("@sTenNCC", txtMaNCC.Text);
                             cmd.Parameters.AddWithValue("@sDonviTinh", txtDonvitinh.Text);
                             cmd.Parameters.AddWithValue("@fDonGia", txtDonGia.Text);
+                            cmd.Parameters.AddWithValue("@iSoLuong", numSoLuong.Value.ToString());
                             cnn.Open();
                             cmd.ExecuteNonQuery();
                             fSanPham_Load(sender, e);
@@ -149,6 +152,7 @@ namespace tuhocbtl
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+
             using (SqlConnection cnn = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = cnn.CreateCommand())
@@ -164,11 +168,62 @@ namespace tuhocbtl
                     cmd.Parameters.AddWithValue("@sTenNCC", txtMaNCC.Text);
                     cmd.Parameters.AddWithValue("@sDonviTinh", txtDonvitinh.Text);
                     cmd.Parameters.AddWithValue("@fDonGia", txtDonGia.Text);
+                    cmd.Parameters.AddWithValue("@iSoLuong", numSoLuong.Value);
                     cnn.Open();
                     cmd.ExecuteNonQuery();
                     fSanPham_Load(sender, e);
                 }
             }
+
+
+        }
+
+        private int checkTrungTenSP()
+        {
+            string queryString = "SELECT * FROM tblSanPham WHERE sTenSP LIKE '" + txtTenSP.Text + "'";
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand(queryString, cnn))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cnn.Open();
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        if (dt.Rows.Count > 0)
+                        {
+                            if (MessageBox.Show(string.Format("Tên sản phẩm này đã trùng , 1 là đổi tên (NO) 2 là cập nhật số lượng của sản phẩm đó (YES) ?"), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                return 1;
+                            }
+                            else
+                            {
+                                return 2;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Yau");
+                        }
+
+                    }
+                    //int i = cmd.ExecuteNonQuery();
+                    //if(i > 0)
+                    //{
+
+
+
+                    //}
+                    //else
+                    //{   
+                    //    MessageBox.Show("Yau");
+                    //    return 2;
+                    //}
+
+                }
+            }
+            return 3;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -228,7 +283,7 @@ namespace tuhocbtl
                 bs.Filter = "sMaSP like '%" + txtTimkiemsp.Text + "%'" +
                              "or sTenSP like '%" + txtTimkiemsp.Text + "%'" +
                              "or sHangSX like '%" + txtTimkiemsp.Text + "%'" +
-                            "or sMaNCC like '%" + txtTimkiemsp.Text + "%'" +
+                            "or sTenNCC like '%" + txtTimkiemsp.Text + "%'" +
                             "or sDonviTinh like '%" + txtTimkiemsp.Text + "%'";
                 dtgvSanPham.DataSource = bs.DataSource;
             }

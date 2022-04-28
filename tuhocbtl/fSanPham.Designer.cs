@@ -57,16 +57,19 @@ namespace tuhocbtl
             this.btnThemSP = new System.Windows.Forms.Button();
             this.dtgvSanPham = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.numSoLuong = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSanPham)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // btntkiemsp
             // 
             this.btntkiemsp.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btntkiemsp.Location = new System.Drawing.Point(897, 307);
-            this.btntkiemsp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btntkiemsp.Margin = new System.Windows.Forms.Padding(2);
             this.btntkiemsp.Name = "btntkiemsp";
             this.btntkiemsp.Size = new System.Drawing.Size(88, 32);
             this.btntkiemsp.TabIndex = 27;
@@ -76,6 +79,8 @@ namespace tuhocbtl
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox1.Controls.Add(this.numSoLuong);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtDonGia);
             this.groupBox1.Controls.Add(this.txtMaNCC);
             this.groupBox1.Controls.Add(this.txtMa);
@@ -92,9 +97,9 @@ namespace tuhocbtl
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(18, 58);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(977, 203);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
@@ -368,6 +373,32 @@ namespace tuhocbtl
             this.label1.Text = "Quản lý sản phẩm";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(536, 167);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 18);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Số lượng";
+            // 
+            // numSoLuong
+            // 
+            this.numSoLuong.Location = new System.Drawing.Point(681, 163);
+            this.numSoLuong.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numSoLuong.Name = "numSoLuong";
+            this.numSoLuong.Size = new System.Drawing.Size(120, 24);
+            this.numSoLuong.TabIndex = 28;
+            this.numSoLuong.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // fSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,7 +411,7 @@ namespace tuhocbtl
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dtgvSanPham);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fSanPham";
             this.Text = "fSanPham";
             this.Load += new System.EventHandler(this.fSanPham_Load);
@@ -388,6 +419,7 @@ namespace tuhocbtl
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSanPham)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,5 +453,7 @@ namespace tuhocbtl
         private System.Windows.Forms.Button btnThemSP;
         private System.Windows.Forms.DataGridView dtgvSanPham;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numSoLuong;
+        private System.Windows.Forms.Label label10;
     }
 }

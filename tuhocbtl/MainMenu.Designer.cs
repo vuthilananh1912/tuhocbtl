@@ -42,8 +42,8 @@ namespace tuhocbtl
             this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thanhToánHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tìmKiếmHóaĐơnToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,18 +158,19 @@ namespace tuhocbtl
             this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
             // 
+            // tìmKiếmHóaĐơnToolStripMenuItem1
+            // 
+            this.tìmKiếmHóaĐơnToolStripMenuItem1.Name = "tìmKiếmHóaĐơnToolStripMenuItem1";
+            this.tìmKiếmHóaĐơnToolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
+            this.tìmKiếmHóaĐơnToolStripMenuItem1.Text = "Tìm kiếm hóa đơn";
+            this.tìmKiếmHóaĐơnToolStripMenuItem1.Click += new System.EventHandler(this.tìmKiếmHóaĐơnToolStripMenuItem1_Click);
+            // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
-            // 
-            // tìmKiếmHóaĐơnToolStripMenuItem1
-            // 
-            this.tìmKiếmHóaĐơnToolStripMenuItem1.Name = "tìmKiếmHóaĐơnToolStripMenuItem1";
-            this.tìmKiếmHóaĐơnToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.tìmKiếmHóaĐơnToolStripMenuItem1.Text = "Tìm kiếm hóa đơn";
-            this.tìmKiếmHóaĐơnToolStripMenuItem1.Click += new System.EventHandler(this.tìmKiếmHóaĐơnToolStripMenuItem1_Click);
+            this.thốngKêToolStripMenuItem.Visible = false;
             // 
             // MainMenu
             // 

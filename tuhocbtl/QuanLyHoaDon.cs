@@ -83,7 +83,7 @@ namespace tuhocbtl
         {
             using (SqlConnection connection = new SqlConnection(dataSource))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM tblSanPham", connection))
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM tblSanPham WHERE deletedAt is NULL", connection))
                 {
                     cmd.CommandType = CommandType.Text;
                     using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
@@ -92,8 +92,13 @@ namespace tuhocbtl
                         adapter.Fill(table);
                         DataView view = new DataView(table);
                         view.Sort = "sTenSP";
+                        
                         cbTenMatHang.DataSource = view;
                         cbTenMatHang.DisplayMember = "sTenSP";
+
+                        currentMaHang = table.Rows[0]["sMaSP"].ToString();
+
+
                     }
                 }
             }

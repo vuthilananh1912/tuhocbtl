@@ -27,7 +27,7 @@ namespace tuhocbtl
             string matKhau = txtMatKhau.Text;
 
             //if(!taiKhoan.Any(char.IsUpper))
-            //if (!taiKhoan.Any(char.IsDigit))
+            //if (taiKhoan.Any(char.IsDigit) == false)
             //{
             //    MessageBox.Show("Ten dang nhap can it nhat mot chu so ");
             //}
@@ -45,7 +45,7 @@ namespace tuhocbtl
                     {
                         MainMenu menu = new MainMenu(taiKhoan);
                         menu.Show();
-                        this.Hide();
+                        this.Hide();                     
                     }
                     else
                     {

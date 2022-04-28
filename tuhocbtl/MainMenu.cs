@@ -95,10 +95,10 @@ namespace tuhocbtl
 
         private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //if (MessageBox.Show(string.Format("Bạn có muốn đóng chương trình quản lí nhân viên?"), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //    e.Cancel = false;
-            //else
-            //    e.Cancel = true;
+            if (MessageBox.Show(string.Format("Bạn có muốn đóng chương trình quản lí nhân viên?"), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                e.Cancel = false;
+            else
+                e.Cancel = true;
             //int timestamp;
             //timestamp = DateTime.Now.Minute - thoigiandangnhap.Minute;
             //MessageBox.Show(timestamp.ToString());
